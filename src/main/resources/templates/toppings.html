@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pizzeria</title>
+</head>
+
+<body>
+<h1>Design your pizza!</h1>
+
+<form method="POST" th:object="${user}">
+    <div>
+        <div>
+            <h3>Your email:</h3>
+            <input type="text" th:field="*{email}"/>
+        </div>
+        <div>
+            <h3>Your choice:</h3>
+            <div th:each="topping : ${toppings}">
+                <input th:field="*{toppingIds}" type="checkbox" th:value="${topping.id}"/>
+                <span th:text="${topping.name}">TOPPING</span><br/>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button>Submit Your Pizza</button>
+    </div>
+</form>
+</body>
+</html>

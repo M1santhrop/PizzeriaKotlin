@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Pizzeria</title>
+</head>
+
+<body>
+<h1>Toppings</h1>
+<div th:if="${!toppingsCount.isEmpty()}">
+  <table style="border: solid 1px black;">
+    <thead>
+    <tr>
+      <th>Topping name</th>
+      <th>Count</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="topping: ${toppingsCount}">
+      <td th:text="${topping.key}" />
+      <td th:text="${topping.value}" />
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

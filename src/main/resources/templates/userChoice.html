@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pizzeria</title>
+</head>
+
+<body>
+<h1>Your Choice</h1>
+<form method="POST" th:object="${user}">
+    <div>
+        <h3>Your email:</h3>
+        <input type="text" th:field="*{email}"/>
+    </div>
+    <div>
+        <button>Get Your Choice</button>
+    </div>
+    </div>
+</form>
+<div th:if="${toppings != null && !toppings.isEmpty()}">
+    <table style="border: solid 1px black;">
+        <thead>
+        <tr>
+            <th>Topping Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="topping: ${toppings}">
+            <td th:text="${topping.name}" />
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
