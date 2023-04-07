@@ -1,7 +1,7 @@
 package com.example.pizzeriakotlin.dto
 
 class ToppingDTO {
-    var id: Long? = null
+    var id: Long = 0
     var name: String? = null
 
     override fun equals(other: Any?): Boolean {
@@ -14,6 +14,6 @@ class ToppingDTO {
     }
 
     override fun hashCode(): Int {
-        return name?.hashCode() ?: 0
+        return name.hashCode()
     }
 }

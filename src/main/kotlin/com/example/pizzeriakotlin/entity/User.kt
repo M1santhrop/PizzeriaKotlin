@@ -10,7 +10,7 @@ class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    var id: Long? = null
+    var id: Long = 0
 
     @Column
     var email: @NotEmpty @Email String? = null

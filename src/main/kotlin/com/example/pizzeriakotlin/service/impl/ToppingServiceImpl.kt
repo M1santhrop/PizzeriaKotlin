@@ -14,11 +14,11 @@ import org.springframework.stereotype.Service
 @Service
 class ToppingServiceImpl(private val userRepository: UserRepository, private val toppingRepository: ToppingRepository) : ToppingService {
     override fun findAll(): List<ToppingDTO> {
-        val toppings = toppingRepository.findAll() as List<Topping?>
+        val toppings = toppingRepository.findAll() as List<Topping>
         return convertToppingsToToppingDTOs(toppings)
     }
 
-    override fun retrieveUsersCountByToppingName(): Map<String?, Int?> {
+    override fun retrieveUsersCountByToppingName(): Map<String?, Int> {
         val users = userRepository.findAll() as List<User?>
         return users
             .map { it!!.toppings }
