@@ -1,8 +1,5 @@
 package com.example.pizzeriakotlin.dto
 
-import lombok.NoArgsConstructor
-
-@NoArgsConstructor
 class ToppingDTO {
     var id: Long? = null
     var name: String? = null

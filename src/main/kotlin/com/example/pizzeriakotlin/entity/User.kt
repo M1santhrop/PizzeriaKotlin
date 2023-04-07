@@ -1,17 +1,11 @@
 package com.example.pizzeriakotlin.entity
 
-import lombok.Data
-import lombok.EqualsAndHashCode
-import lombok.NoArgsConstructor
 import javax.persistence.*
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotEmpty
 
 @Entity
-@Data
-@NoArgsConstructor
 @Table(name = "topping_user")
-@EqualsAndHashCode(of = ["email"])
 class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

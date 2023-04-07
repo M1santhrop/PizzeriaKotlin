@@ -1,12 +1,8 @@
 package com.example.pizzeriakotlin.entity
 
-import lombok.Data
-import lombok.NoArgsConstructor
 import javax.persistence.*
 
 @Entity
-@Data
-@NoArgsConstructor
 @Table
 class Topping {
     @Id
