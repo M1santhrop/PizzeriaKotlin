@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode
 import lombok.NoArgsConstructor
 import javax.persistence.*
 import javax.validation.constraints.Email
+import javax.validation.constraints.NotEmpty
 
 @Entity
 @Data
@@ -18,7 +19,7 @@ class User {
     var id: Long? = null
 
     @Column
-    var email: @Email String? = null
+    var email: @NotEmpty @Email String? = null
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
     @JoinTable(

@@ -1,10 +1,9 @@
 package com.example.pizzeriakotlin.dto
 
 import lombok.NoArgsConstructor
-import java.io.Serializable
 
 @NoArgsConstructor
-class ToppingDTO : Serializable {
+class ToppingDTO {
     var id: Long? = null
     var name: String? = null
 

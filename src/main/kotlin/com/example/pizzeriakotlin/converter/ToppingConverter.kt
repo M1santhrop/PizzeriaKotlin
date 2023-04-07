@@ -12,7 +12,7 @@ object ToppingConverter {
             .map { obj: Topping? -> convertToppingToToppingDTO(obj) }
     }
 
-    fun convertToppingToToppingDTO(topping: Topping?): ToppingDTO {
+    private fun convertToppingToToppingDTO(topping: Topping?): ToppingDTO {
         var toppingDTO = ToppingDTO()
         toppingDTO.id = topping?.id
         toppingDTO.name = topping?.name
